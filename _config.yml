@@ -18,24 +18,31 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+# Build settings
+theme: jekyll-theme-chirpy
+plugins:
+  - jekyll-feed
+
 title: Folkert's Place on the Internet
 email: folkertdevries1@gmail.com
 lang: en
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Europe/Amsterdam
+
 description: >- # this means to ignore newlines until "baseurl:"
   This is my place where i dump some of my technical stuff that i am working on. Feel free to browse.
   Most of it will be programming, AI/ML related. Or maybe some hardware stuff that i like to tinker with.
-baseurl: "/" # the subpath of your site, e.g. /blog
+
+baseurl: "" # the subpath of your site, e.g. /blog
+
 url: "https://www.folkertdevries.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  flokkiej
-linkedin_username: folkert-de-vries-56106586
+github: 
+  username: flokkiej
+linkedin: 
+  username: folkert-de-vries-56106586
 
-# Build settings
-theme: jekyll-theme-chirpy
-plugins:
-  - jekyll-feed
+about:
 
 social:
   # Change to your full name.
@@ -80,7 +87,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: goatcounter # now only supports 'goatcounter'
+  provider:  # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
 #
@@ -133,6 +140,27 @@ comments:
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
+
+# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled: # boolean, keep empty means false
+    # specify the Jekyll environment, empty means both
+    # only works if `assets.self_host.enabled` is 'true'
+    env: # [development | production]
+
+pwa:
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+    # Paths defined here will be excluded from the PWA cache.
+    # Usually its value is the `baseurl` of another website that
+    # shares the same domain name as the current website.
+    deny_paths:
+      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+
+paginate: 10
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
